@@ -5,7 +5,8 @@ const theme: DefaultTheme = {
   colors: {
     primary: '#0878A1',
     error: '#FF0D0D',
-    white: '#FFF'
+    white: '#FFF',
+    black: '#0E171B'
   },
   fonts: {
     family: {
