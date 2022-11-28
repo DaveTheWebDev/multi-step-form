@@ -6,12 +6,12 @@ const primary = css`
   padding: 11px 24px 13px;
   border-radius: 4px;
 
-  color: #FFFFFF;
-  background-color: #0878A1;
-
+  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.primary};
+  
 `
 const dangerous = css`
-  color: #FF0D0D;
+  color: ${({ theme }) => theme.colors.error};
 
   text-decoration: underline;
 `
