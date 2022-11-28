@@ -1,7 +1,7 @@
 import React from 'react'
 import { CheckboxProps } from './Checkbox.types'
-import * as S from './Checkbox.styles'
 import { Checkmark } from './Checkmark/Checkmark'
+import * as S from './Checkbox.styles'
 
 export const Checkbox = ({ isChecked, isDisabled, name, id, label }: CheckboxProps) => {
   return <S.Wrapper>
