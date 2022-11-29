@@ -8,11 +8,9 @@ const Wrapper = styled.section`
 const Title = styled.h2`
 color: ${({ theme }) => theme.colors.black};
 
-font-family: 'Inter';
-font-style: normal;
 font-weight: 600;
 font-size: 20px;
-line-height: 140%;
+line-height: 1.4;
 `
 
 export { Wrapper, Title }

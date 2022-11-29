@@ -24,10 +24,8 @@ const Button = styled.button<ButtonProps>`
   
   background-color: transparent;
 
-  font-family: 'Inter';
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.5;
 
   cursor: pointer;
   ${({ variant }) => {

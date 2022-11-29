@@ -1,3 +1,3 @@
 export interface StepProps {
-  children: React.ReactElement[]
+  children: React.ReactNode[]
 }

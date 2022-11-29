@@ -31,7 +31,6 @@ cursor: pointer;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.5;
 }
 `
 

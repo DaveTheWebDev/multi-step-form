@@ -1,11 +1,13 @@
 import React from 'react'
 import { Step } from '../../atoms/Step/Step'
 import { OverviewProps } from './Overview.types'
-import * as S from './Overview.styles'
 import { InfoSection } from '../../atoms/InfoSection/InfoSection'
+import * as S from './Overview.styles'
+import { Button } from '../../atoms/Button/Button'
 
-export const Overview = ({ sections }: OverviewProps) => {
+export const Overview = ({ sections, buttonHandler, buttonLabel }: OverviewProps) => {
   return <Step>
-    {sections.map(({ content, title }) => <InfoSection title={title}>{content}</InfoSection>)}
+    {sections.map(({ children, title }) => <InfoSection title={title}>{children}</InfoSection>)}
+    <Button variant='primary' onClick={buttonHandler}>{buttonLabel}</Button>
   </Step>
 }

@@ -1,4 +1,4 @@
 export interface InfoSectionProps {
   title: string;
-  content: React.ReactNode | React.ReactNode[]
+  children: React.ReactNode | React.ReactNode[]
 }

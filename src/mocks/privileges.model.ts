@@ -1,7 +1,7 @@
 interface IPrivilege {
 	label: string;
 	name: string;
-	children?: IPrivilege[];
+	subprivileges?: IPrivilege[];
 }
 
 export interface IPrivileges {

@@ -7,7 +7,7 @@ export const privileges: IPrivileges[] = [
 			{
 				label: "a",
 				name: "a",
-				children: [
+				subprivileges: [
 					{
 						label: "b",
 						name: "b",
@@ -22,7 +22,7 @@ export const privileges: IPrivileges[] = [
 			{
 				label: "c",
 				name: "c",
-				children: [
+				subprivileges: [
 					{
 						label: "d",
 						name: "d",
