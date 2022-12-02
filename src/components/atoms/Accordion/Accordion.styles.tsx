@@ -5,20 +5,29 @@ interface WrapperProps {
 }
 
 //Przy większej aplikacji możemy wyciągnąć kolory i inne powtarzalne w komponentach właściwości do theme
-const Wrapper = styled.fieldset<WrapperProps>`
+const Wrapper = styled.fieldset`
 position: relative;
 border: none;
 background-color: ${({ theme }) => theme.colors.white};
+overflow: hidden;
 & svg {
+  
+  }
+`
+
+const Arrow = styled.svg<WrapperProps>`
   position: absolute;
   top: 8px;
   right: 0;
   width: 16.5px;
   transform: rotate(${({ isExpanded }) => isExpanded ? '180deg' : '0deg'});
   cursor: pointer;
-  }
 `
-const Title = styled.h3`
+const Title = styled.button`
+
+border: none;
+background-color: ${({ theme }) => theme.colors.white};
+
 font-family: ${({ theme }) => theme.fonts.family.main};
 font-style: normal;
 font-weight: 600;
@@ -33,5 +42,9 @@ cursor: pointer;
   font-size: 16px;
 }
 `
-
-export { Wrapper, Title }
+const Panel = styled.div<WrapperProps>`
+  max-height: ${({ isExpanded }) => isExpanded ? '400px' : '0px'};
+  transition: .3s;
+  will-change: max-height;
+`
+export { Wrapper, Title, Panel, Arrow }
