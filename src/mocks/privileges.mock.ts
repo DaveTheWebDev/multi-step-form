@@ -5,12 +5,12 @@ export const privileges: IPrivileges[] = [
 		category: "Employees",
 		privileges: [
 			{
-				label: "a",
-				name: "a",
+				label: "adasdasdasdasdas",
+				name: "adasdasdasdasdas",
 				subprivileges: [
 					{
-						label: "b",
-						name: "b",
+						label: "bdadawddawdawd",
+						name: "bdadawddawdawd",
 					},
 				],
 			},
@@ -20,16 +20,16 @@ export const privileges: IPrivileges[] = [
 		category: "Company Management",
 		privileges: [
 			{
-				label: "c",
-				name: "c",
+				label: "bdadawddawdawdd",
+				name: "bdadawddawdawddasd",
 				subprivileges: [
 					{
-						label: "d",
-						name: "d",
+						label: "bdadawddawdawddasda",
+						name: "bdadawddawdawdsadada",
 					},
 					{
-						label: "e",
-						name: "e",
+						label: "bdadawddawdawdsdawwww",
+						name: "bdadawddawdawdwd21",
 					},
 				],
 			},
@@ -39,16 +39,16 @@ export const privileges: IPrivileges[] = [
 		category: "Company Performance",
 		privileges: [
 			{
-				label: "f",
-				name: "f",
+				label: "fbdadawddawdawd",
+				name: "fbdadawddawdawd",
 			},
 			{
-				label: "g",
-				name: "g",
+				label: "gbdadawddawdawd",
+				name: "gbdadawddawdawd",
 			},
 			{
-				label: "h",
-				name: "h",
+				label: "hbdadawddawdawd",
+				name: "hbdadawddawdawd",
 			},
 		],
 	},
@@ -56,8 +56,8 @@ export const privileges: IPrivileges[] = [
 		category: "Workspaces Management",
 		privileges: [
 			{
-				label: "i",
-				name: "i",
+				label: "ibdadawddawdawd",
+				name: "ibdadawddawdawd",
 			},
 		],
 	},
