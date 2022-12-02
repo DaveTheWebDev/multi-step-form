@@ -7,7 +7,11 @@ const Wrapper = styled.div`
   left: 50%;
   transform: translate(-50%,-50%);
 
+  display: flex;
+  flex-direction: column;
+
   width: 750px;
+  min-height: 500px;
   padding: 40px;
   border-radius: 12px;
 
