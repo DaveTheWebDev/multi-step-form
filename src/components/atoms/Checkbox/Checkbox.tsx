@@ -3,10 +3,12 @@ import { CheckboxProps } from './Checkbox.types'
 import { Checkmark } from './Checkmark/Checkmark'
 import * as S from './Checkbox.styles'
 
-export const Checkbox = ({ isChecked, isDisabled, name, id, label }: CheckboxProps) => {
-  return <S.Wrapper>
-    <S.Input type='checkbox' isChecked={isChecked} isDisabled={isDisabled} name={name} id={id} />
-    <S.Label htmlFor={id}>{label}</S.Label>
-    {isChecked && <Checkmark />}
-  </S.Wrapper>
+export const Checkbox = ({ isChecked, name, id, label, dephLevel, choosePrivilege }: CheckboxProps) => {
+  return (
+    <S.Wrapper dephLevel={dephLevel}>
+      <S.Input onChange={choosePrivilege} type='checkbox' checked={isChecked} name={name} id={id} />
+      <S.Label dephLevel={dephLevel} htmlFor={id} isChecked={isChecked}>{label}</S.Label>
+      {isChecked && <Checkmark dephLevel={dephLevel} />}
+    </S.Wrapper>
+  )
 }

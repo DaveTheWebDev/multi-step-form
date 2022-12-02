@@ -1,14 +1,14 @@
 //użyłem interfejsów ze względu na performance
-export interface CheckboxProps extends CheckboxInputProps, CheckboxLabelProps {
+export interface CheckboxProps extends CheckboxInputProps, CheckboxLabelProps, React.HTMLProps<HTMLInputElement> {
+  choosePrivilege: () => void
+
 }
 
 export interface CheckboxInputProps {
-  name: string;
-  isChecked: boolean;
-  isDisabled: boolean
-  id: string;
-}
 
+}
 export interface CheckboxLabelProps {
-  label: string;
+  isChecked: boolean;
+  dephLevel: number;
+
 }
