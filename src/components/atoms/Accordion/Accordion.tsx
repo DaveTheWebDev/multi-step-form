@@ -1,6 +1,6 @@
 import React from 'react'
 import { AccordionProps } from './Accordion.types'
-import { ArrowIcon } from './Arrow/ArrowIcon'
+import { ArrowIcon } from '../Icons/Arrow/ArrowIcon'
 import * as S from './Accordion.styles'
 import { useAccordion } from './Accordion.hooks'
 

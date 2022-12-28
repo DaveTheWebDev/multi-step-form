@@ -1,9 +1,9 @@
-import { IChoosenPrivilege } from "../../mocks/privileges.model";
+import { IChosenPrivilege } from "../../mocks/privileges.model";
 
 export interface IMultiStepsFormState {
   currentStep: number;
-  choosenPrivileges: IChoosenPrivilege[]
+  chosenPrivileges: IChosenPrivilege[]
   setStepNumber: (nextStep: number) => () => void;
-  choosePrivilege: (dephLevel: number, label: string, category: string, choosenPrivileges: IChoosenPrivilege[]) => () => void;
+  choosePrivilege: (depthLevel: number, label: string, category: string, chosenPrivileges: IChosenPrivilege[]) => () => void;
   resetPrivileges: () => void
 }

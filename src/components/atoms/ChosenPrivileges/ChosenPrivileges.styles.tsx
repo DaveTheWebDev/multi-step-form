@@ -4,7 +4,7 @@ const Wrapper = styled.ul`
 margin-bottom: 16px;
 `
 
-const Privilege = styled.li<{ dephLevel: number }>`
+const Privilege = styled.li<{ depthLevel: number }>`
   
 `
 const EmptyPrivileges = styled.p`

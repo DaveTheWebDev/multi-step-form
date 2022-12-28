@@ -3,19 +3,19 @@ import { CheckboxLabelProps } from './Checkbox.types'
 const paddingLeft = 36
 const left = 36
 //Przy większej aplikacji możemy wyciągnąć kolory i inne powtarzalne w komponentach właściwości do theme
-const Wrapper = styled.div<{ dephLevel: number }>`
+const Wrapper = styled.div<{ depthLevel: number }>`
   position: relative;
   margin: 16px 0;
   cursor: pointer;
 `
 const Label = styled.label<CheckboxLabelProps>`
-  padding-left: ${({ dephLevel }) => paddingLeft * dephLevel + paddingLeft}px;
+  padding-left: ${({ depthLevel }) => paddingLeft * depthLevel + paddingLeft}px;
 
   &::before {
     content: "";
     position: absolute;
     top: 0;
-    left: ${({ dephLevel }) => left * dephLevel}px;
+    left: ${({ depthLevel }) => left * depthLevel}px;
 
     height: 24px;
     width: 24px;

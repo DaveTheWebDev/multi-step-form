@@ -1,8 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { SelectedCompany } from './components/atoms/SelectedCompany/SelectedCompany';
-import { MultiStepsFormProvider, useMultiStepsForm } from './components/context/MultiStepsFormCtx';
-import { Overview } from './components/molecues/Overview/Overview';
+import { MultiStepsFormProvider } from './components/context/MultiStepsFormCtx';
 import Form from './components/organisms/Form';
 import { GlobalStyles } from './styles/global';
 import theme from './styles/theme'

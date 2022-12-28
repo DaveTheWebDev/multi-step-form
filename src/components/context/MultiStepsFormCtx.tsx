@@ -1,5 +1,5 @@
 import React, { createContext, useCallback, useContext, useState } from "react"
-import { IChoosenPrivilege } from "../../mocks/privileges.model"
+import { IChosenPrivilege } from "../../mocks/privileges.model"
 import { IMultiStepsFormState } from "./MultiStepsFormCtx.types"
 
 //undefined, żeby wykryć czy komponent jest poza kontekstem
@@ -18,7 +18,7 @@ export const useMultiStepsForm = () => {
 
 export const MultiStepsFormProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [currentStep, setCurrentStep] = useState(0)
-  const [choosenPrivileges, setChoosenPrivileges] = useState<IChoosenPrivilege[]>([])
+  const [chosenPrivileges, setChosenPrivileges] = useState<IChosenPrivilege[]>([])
   const setStepNumber = useCallback((nextStep: number) => () => {
     if (nextStep < 0) {
       throw new Error("Next step number can not be lower than 0");
@@ -27,25 +27,25 @@ export const MultiStepsFormProvider: React.FC<{ children: React.ReactNode }> = (
   }, [])
 
 
-  const choosePrivilege = useCallback((dephLevel: number, label: string, category: string, choosenPrivileges: IChoosenPrivilege[]) => () => {
-    const choosenPrivilegesIndex = choosenPrivileges.findIndex(
-      choosenPrivilege => choosenPrivilege.label === label &&
-        choosenPrivilege.dephLevel === dephLevel &&
-        choosenPrivilege.category === category)
-    if (choosenPrivilegesIndex !== -1) {
-      const choosenPrivilegesCopy = [...choosenPrivileges]
-      choosenPrivilegesCopy.splice(choosenPrivilegesIndex, 1)
-      setChoosenPrivileges(choosenPrivilegesCopy)
+  const choosePrivilege = useCallback((depthLevel: number, label: string, category: string, chosenPrivileges: IChosenPrivilege[]) => () => {
+    const chosenPrivilegesIndex = chosenPrivileges.findIndex(
+      chosenPrivilege => chosenPrivilege.label === label &&
+        chosenPrivilege.depthLevel === depthLevel &&
+        chosenPrivilege.category === category)
+    if (chosenPrivilegesIndex !== -1) {
+      const chosenPrivilegesCopy = [...chosenPrivileges]
+      chosenPrivilegesCopy.splice(chosenPrivilegesIndex, 1)
+      setChosenPrivileges(chosenPrivilegesCopy)
       return;
     }
-    setChoosenPrivileges(prev => [...prev, { dephLevel, label, category }])
+    setChosenPrivileges(prev => [...prev, { depthLevel, label, category }])
   }, [])
 
   const resetPrivileges = useCallback(() => {
-    setChoosenPrivileges([])
+    setChosenPrivileges([])
   }, [])
 
-  return <MultiStepsFormCtx.Provider value={{ currentStep, choosenPrivileges, setStepNumber, choosePrivilege, resetPrivileges }}>
+  return <MultiStepsFormCtx.Provider value={{ currentStep, chosenPrivileges, setStepNumber, choosePrivilege, resetPrivileges }}>
     {children}
   </MultiStepsFormCtx.Provider>
 }

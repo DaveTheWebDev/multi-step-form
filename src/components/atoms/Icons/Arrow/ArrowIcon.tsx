@@ -1,6 +1,6 @@
 import React from 'react'
-import * as S from '../Accordion.styles'
-import { ArrowIconProps } from '../Accordion.types'
+import * as S from '../../Accordion/Accordion.styles'
+import { ArrowIconProps } from '../../Accordion/Accordion.types'
 
 export const ArrowIcon = ({ isExpanded }: ArrowIconProps) => {
   return <S.Arrow isExpanded={isExpanded} aria-hidden={true} width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -4,8 +4,8 @@ export interface IPrivilege {
 	subprivileges?: IPrivilege[];
 }
 
-export interface IChoosenPrivilege {
-	dephLevel: number;
+export interface IChosenPrivilege {
+	depthLevel: number;
 	label: string;
 	category: string;
 }

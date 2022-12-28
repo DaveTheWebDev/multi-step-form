@@ -9,6 +9,6 @@ export interface CheckboxInputProps {
 }
 export interface CheckboxLabelProps {
   isChecked: boolean;
-  dephLevel: number;
+  depthLevel: number;
 
 }
