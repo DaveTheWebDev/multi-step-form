@@ -1,11 +1,11 @@
 import styled from 'styled-components'
-const left = 36
-//Przy większej aplikacji możemy wyciągnąć kolory i inne powtarzalne w komponentach właściwości do theme
+const left = 3
+
 const Checkmark = styled.svg<{ depthLevel: number }>`
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: ${({ depthLevel }) => left * depthLevel + 6}px;
+    left: ${({ depthLevel }) => depthLevel ? left * depthLevel + left : 2 * left}px;
 `
 
 
