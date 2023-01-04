@@ -1,11 +1,10 @@
 import styled from 'styled-components'
 
-//Przy większej aplikacji możemy wyciągnąć kolory i inne powtarzalne w komponentach właściwości do theme
 const Wrapper = styled.div`
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translateX(-50%);
 
   display: flex;
   flex-direction: column;
