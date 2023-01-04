@@ -1,8 +1,9 @@
-import React from "react";
-import { InfoSectionProps } from "../../atoms/InfoSection/InfoSection.types";
+import { IPrivilegeCheckboxStates, IPrivilege } from "mocks/privileges/privileges.model";
 
 export interface OverviewProps {
-  sections: InfoSectionProps[]
-  buttonLabel: string;
+  privilegeCheckboxesState: IPrivilegeCheckboxStates
   setStepNumber: () => void
+  privileges: IPrivilege[];
+  selectedCompanyName: string
+  selectedCompanyId: string
 }

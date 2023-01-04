@@ -1,14 +1,13 @@
-import { IChosenPrivilege, IPrivileges } from "../../../mocks/privileges.model";
+import { IPrivilege, IPrivilegeCheckboxStates, ICategory } from "mocks/privileges/privileges.model";
+import { TChoosePrivilege } from "components/context/MultiStepForm/MultiStepFormCtx.types";
 
 export interface PrivilegesProps {
-  privileges: IPrivileges[]
-  saveButtonLabel: string;
-  clearButtonLabel: string;
-  sectionLabel: string;
-  selectedCategoryLabel: string;
-  selectedCategoryDivider: string;
-  choosePrivilege: (depthLevel: number, label: string, category: string, chosenPrivileges: IChosenPrivilege[]) => () => void;
+  categories: ICategory[]
+  choosePrivilege: TChoosePrivilege
   resetPrivileges: () => void
-  chosenPrivileges: IChosenPrivilege[]
+  privilegeCheckboxesState: IPrivilegeCheckboxStates
   setStepNumber: () => void
+  privileges: IPrivilege[]
+  selectedCompanyName: string
+  selectedCompanyId: string
 }
