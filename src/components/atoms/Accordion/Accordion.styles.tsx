@@ -4,22 +4,17 @@ interface WrapperProps {
   isExpanded: boolean
 }
 
-//Przy większej aplikacji możemy wyciągnąć kolory i inne powtarzalne w komponentach właściwości do theme
 const Wrapper = styled.fieldset`
 position: relative;
 border: none;
 background-color: ${({ theme }) => theme.colors.white};
 overflow: hidden;
-& svg {
-  
-  }
 `
 
 const Arrow = styled.svg<WrapperProps>`
   position: absolute;
-  top: 8px;
+  top: 0px;
   right: 0;
-  width: 16.5px;
   transform: rotate(${({ isExpanded }) => isExpanded ? '180deg' : '0deg'});
   cursor: pointer;
 `
@@ -28,7 +23,6 @@ const Title = styled.button`
 border: none;
 background-color: ${({ theme }) => theme.colors.white};
 
-font-family: ${({ theme }) => theme.fonts.family.main};
 font-style: normal;
 font-weight: 600;
 font-size: 20px;
@@ -36,7 +30,6 @@ line-height: 1.4;
 cursor: pointer;
 
 & span {
-  font-family: ${({ theme }) => theme.fonts.family.main};
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -44,7 +37,11 @@ cursor: pointer;
 `
 const Panel = styled.div<WrapperProps>`
   max-height: ${({ isExpanded }) => isExpanded ? '400px' : '0px'};
-  transition: .3s;
+  transition: ${({ isExpanded }) => isExpanded ? '.3s' : '0s'};
   will-change: max-height;
+
+  & span[role=checkbox] {
+    display: ${({ isExpanded }) => isExpanded ? 'block' : 'none'};
+  }
 `
 export { Wrapper, Title, Panel, Arrow }
