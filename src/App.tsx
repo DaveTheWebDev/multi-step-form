@@ -1,18 +1,17 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
-import { MultiStepsFormProvider } from './components/context/MultiStepsFormCtx';
-import Form from './components/organisms/Form';
-import { GlobalStyles } from './styles/global';
-import theme from './styles/theme'
+import { MultiStepsFormProvider, TranslationsProvider } from 'components/context';
+import { StylesProvider } from 'styles/theme';
+import Form from 'components/organisms/Form';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
+    <StylesProvider>
       <MultiStepsFormProvider>
-        <Form />
+        <TranslationsProvider>
+          <Form />
+        </TranslationsProvider>
       </MultiStepsFormProvider>
-    </ThemeProvider>
+    </StylesProvider>
   );
 }
 
