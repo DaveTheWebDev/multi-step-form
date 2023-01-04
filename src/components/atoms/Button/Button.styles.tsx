@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components'
 import { ButtonProps } from './Button.types'
 
-//Przy większej aplikacji możemy wyciągnąć kolory i inne powtarzalne w komponentach właściwości do theme
 const primary = css`
   padding: 11px 24px 13px;
   border-radius: 4px;
@@ -15,9 +14,6 @@ const dangerous = css`
 
   text-decoration: underline;
 `
-
-
-
 
 const Button = styled.button<ButtonProps>`
   border: none;

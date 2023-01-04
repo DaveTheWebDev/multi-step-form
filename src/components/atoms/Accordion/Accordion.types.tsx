@@ -1,7 +1,7 @@
 export interface AccordionProps {
   title: string;
   subtitle: string;
-  children: React.ReactElement[]
+  children: React.ReactElement
   index: number;
 }
 
