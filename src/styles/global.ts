@@ -9,7 +9,10 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
     }
     body {
-        font-family: 'Inter';
+        font-family: 'Roboto';
         line-height: 1.5;
+    }
+    *:focus-visible {
+        outline: 1px auto red;
     }
 `;

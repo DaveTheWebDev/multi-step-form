@@ -1,6 +1,6 @@
 import "styled-components";
 
-//laczymy interfejsy
+//interface merging
 declare module "styled-components" {
 	export interface DefaultTheme {
 		colors: {

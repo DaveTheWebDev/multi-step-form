@@ -1,6 +1,6 @@
-import { DefaultTheme } from 'styled-components';
+import { DefaultTheme, ThemeProvider } from 'styled-components';
+import { GlobalStyles } from 'styles/global';
 
-// kolory od najjasniejszego do najciemniejszego
 const theme: DefaultTheme = {
   colors: {
     primary: '#0878A1',
@@ -10,9 +10,15 @@ const theme: DefaultTheme = {
   },
   fonts: {
     family: {
-      main: 'Inter'
+      main: 'Roboto'
     },
   },
 };
 
-export default theme;
+export const StylesProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return <ThemeProvider theme={theme}>
+    <GlobalStyles />
+    {children}
+  </ThemeProvider>
+}
+
