@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useLayoutEffect } from "react";
 
 export const useAccordion = (index: number) => {
 	const [isExpanded, setExpanded] = useState(false);
@@ -7,7 +7,7 @@ export const useAccordion = (index: number) => {
 		setExpanded(prev => !prev);
 	}, []);
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		if (index === 0) {
 			setExpanded(true);
 		}

@@ -36,7 +36,7 @@ cursor: pointer;
 }
 `;
 const Panel = styled.div<WrapperProps>`
-  max-height: ${({ isExpanded }) => isExpanded ? "400px" : "0px"};
+  max-height: ${({ isExpanded }) => isExpanded ? "500px" : "0px"};
   transition: ${({ isExpanded }) => isExpanded ? ".3s" : "0s"};
   will-change: max-height;
 
