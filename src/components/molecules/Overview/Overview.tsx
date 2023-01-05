@@ -17,7 +17,7 @@ export const Overview = ({
 				<SelectedCompany companyName={selectedCompanyName} id={selectedCompanyId} />
 			</InfoSection>
 			<Divider />
-			<InfoSection title={chosenPrivileges}>
+			<InfoSection title={chosenPrivileges} style={{ marginBottom: "16px" }} >
 				<ChosenPrivileges privileges={privileges} categories={categories} privilegeCheckboxesState={privilegeCheckboxesState} emptyPrivilegesLabel={emptyPrivileges} />
 			</InfoSection>
 			<Button style={{ marginTop: "auto" }} variant='primary' onClick={setStepNumber}>{addPreferences}</Button>

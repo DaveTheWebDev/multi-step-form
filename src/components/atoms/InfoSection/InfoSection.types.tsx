@@ -1,4 +1,7 @@
+import { CSSProperties } from "styled-components";
+
 export interface InfoSectionProps {
   title: string;
-  children: React.ReactNode | React.ReactNode[]
+  children: JSX.Element
+  style?: CSSProperties
 }

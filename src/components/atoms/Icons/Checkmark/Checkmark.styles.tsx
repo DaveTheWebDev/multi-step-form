@@ -5,7 +5,7 @@ const Checkmark = styled.svg<{ depthLevel: number }>`
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: ${({ depthLevel }) => depthLevel ? left * depthLevel + left : 2 * left}px;
+    left: 6px;
 `;
 
 
