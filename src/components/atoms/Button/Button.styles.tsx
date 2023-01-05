@@ -38,13 +38,13 @@ const Button = styled.button<ButtonProps>`
 
   cursor: pointer;
   ${({ variant }) => {
-    switch (variant) {
-      case "primary":
-        return primary;
-      case "dangerous":
-        return dangerous;
-    }
-  }}
+		switch (variant) {
+		case "primary":
+			return primary;
+		case "dangerous":
+			return dangerous;
+		}
+	}}
 `;
 
 export { Button };
