@@ -5,5 +5,6 @@ import { ChosenPrivileges } from "components/atoms/ChosenPrivileges/ChosenPrivil
 import { InfoSection } from "components/atoms/InfoSection/InfoSection";
 import { SelectedCompany } from "components/atoms/SelectedCompany/SelectedCompany";
 import { Step } from "components/atoms/Step/Step";
+import { Divider } from "components/atoms/Divider/Divider";
 
-export { Accordion, Button, Checkbox, ChosenPrivileges, InfoSection, SelectedCompany, Step };
+export { Accordion, Button, Checkbox, ChosenPrivileges, InfoSection, SelectedCompany, Step, Divider };

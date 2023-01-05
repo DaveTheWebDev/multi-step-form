@@ -1,5 +1,5 @@
 import React from "react";
-import { Step, InfoSection, Button, ChosenPrivileges, SelectedCompany } from "components/atoms";
+import { Step, InfoSection, Button, ChosenPrivileges, SelectedCompany, Divider } from "components/atoms";
 import { OverviewProps } from "./Overview.types";
 import { useTranslations } from "components/context/Translations/TranslationsCtx";
 
@@ -16,6 +16,7 @@ export const Overview = ({
 			<InfoSection title={selectedCompany}>
 				<SelectedCompany companyName={selectedCompanyName} id={selectedCompanyId} />
 			</InfoSection>
+			<Divider />
 			<InfoSection title={chosenPrivileges}>
 				<ChosenPrivileges privileges={privileges} categories={categories} privilegeCheckboxesState={privilegeCheckboxesState} emptyPrivilegesLabel={emptyPrivileges} />
 			</InfoSection>

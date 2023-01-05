@@ -1,5 +1,5 @@
 import React from "react";
-import { Step, SelectedCompany, Accordion, Button, InfoSection } from "components/atoms";
+import { Step, SelectedCompany, Accordion, Button, InfoSection, Divider } from "components/atoms";
 import { CheckboxList } from "../CheckboxList/CheckboxList";
 import { getStateForId, getAccordionSubtitle } from "./utils";
 import { PrivilegesProps } from "./Privileges.types";
@@ -23,7 +23,7 @@ export const Privileges = ({
 			<InfoSection title={selectedCompany}>
 				<SelectedCompany companyName={selectedCompanyName} id={selectedCompanyId} />
 			</InfoSection>
-			<S.Divider />
+			<Divider />
 			{categories.map(({ category, privilegeIds }, i) => {
 				const privilegesInCategory = privilegeIds.map(id => privileges.find(privilege => privilege.id === id)!);
 				const accordionSubtitle = getAccordionSubtitle({ of, privilegeCheckboxesState, privilegeIds, privileges, servicesSelected });
