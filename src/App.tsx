@@ -1,7 +1,7 @@
 import React from "react";
 import { MultiStepsFormProvider, TranslationsProvider } from "components/context";
 import { StylesProvider } from "styles/theme";
-import Form from "components/organisms/Form";
+import { Form } from "components/templates/Form/Form";
 
 function App() {
 	return (

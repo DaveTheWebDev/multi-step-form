@@ -1,6 +1,6 @@
 import React from "react";
 import { Step, SelectedCompany, Accordion, Button, InfoSection, Divider } from "components/atoms";
-import { CheckboxList } from "../CheckboxList/CheckboxList";
+import { CheckboxList } from "../../molecules/CheckboxList/CheckboxList";
 import { getStateForId, getAccordionSubtitle } from "./utils";
 import { PrivilegesProps } from "./Privileges.types";
 import * as S from "./Privileges.styles";

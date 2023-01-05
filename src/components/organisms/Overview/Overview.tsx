@@ -1,5 +1,6 @@
 import React from "react";
-import { Step, InfoSection, Button, ChosenPrivileges, SelectedCompany, Divider } from "components/atoms";
+import { Step, InfoSection, Button, SelectedCompany, Divider } from "components/atoms";
+import { ChosenPrivileges } from "components/organisms";
 import { OverviewProps } from "./Overview.types";
 import { useTranslations } from "components/context/Translations/TranslationsCtx";
 

@@ -16,7 +16,7 @@ export const ChosenPrivileges = ({ privilegeCheckboxesState, emptyPrivilegesLabe
 					const isCategoryEmpty = chosenPrivilegesInCategory.length === 0;
 
 					return (
-						isCategoryEmpty ? null : <React.Fragment key={id}>
+						!isCategoryEmpty && <React.Fragment key={id}>
 							<S.CategoryName>{category}</S.CategoryName>
 							<PrivilegesList
 								privilegeCheckboxesState={privilegeCheckboxesState}

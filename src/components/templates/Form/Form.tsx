@@ -1,13 +1,13 @@
 import React from "react";
 import { useMultiStepsForm } from "components/context/MultiStepForm/MultiStepFormCtx";
-import { Overview, Privileges } from "components/molecules";
+import { Overview, Privileges } from "components/organisms";
 import { privileges, categories } from "mocks/privileges/privileges.mock";
 import { Steps } from "components/context/MultiStepForm/MultiStepFormCtx.types";
 import * as S from "./Form.styles";
 
 
 
-function Form() {
+export const Form = () => {
 	const {
 		privilegeCheckboxesState,
 		choosePrivilege,
@@ -40,6 +40,5 @@ function Form() {
 			}
 		</S.FormWrapper>
 	);
-}
+};
 
-export default Form;
