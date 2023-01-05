@@ -9,7 +9,7 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
     }
     body {
-        font-family: 'Roboto';
+        font-family: 'Roboto', sans-serif;
         line-height: 1.5;
     }
     *:focus-visible {
