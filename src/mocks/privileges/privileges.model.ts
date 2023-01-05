@@ -1,9 +1,9 @@
 import { IPrivilegeDTO, ICategoryDTO } from "./privileges.DTO";
 
 //extends DTOs to further app model change
-export interface IPrivilege extends IPrivilegeDTO {}
+export type IPrivilege = IPrivilegeDTO
 
-export interface ICategory extends ICategoryDTO {}
+export type ICategory = ICategoryDTO
 
 export enum CheckboxState {
 	CHECKED = "CHECKED",

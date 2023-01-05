@@ -1,45 +1,42 @@
-import React from 'react'
-import { PrivilegesListProps } from './PrivilegesList.types'
-import * as S from './PrivilegesList.styles'
+import React from "react";
+import { PrivilegesListProps } from "./PrivilegesList.types";
+import * as S from "./PrivilegesList.styles";
 
 export const PrivilegesList = ({
-  chosenPrivileges,
-  privileges,
-  idsToRender = [],
-  depthLevel = 0,
+	privilegeCheckboxesState,
+	privileges,
+	idsToRender = [],
 }: PrivilegesListProps) => {
 
-  if (!idsToRender.length) {
-    idsToRender = privileges.filter((i) => !i.parentId).map((i) => i.id);
-  }
+	if (!idsToRender.length) {
+		idsToRender = privileges.filter((privilege) => !privilege.parentId).map((privilegeWithoutParent) => privilegeWithoutParent.id);
+	}
 
-  const getChildNodes = (parentId: number) => {
-    const nodeItems = privileges.filter((i) => i.parentId === parentId);
-    if (!nodeItems.length) return null;
-    return (
-      <PrivilegesList
-        privileges={privileges}
-        idsToRender={nodeItems.map((i) => i.id)}
-        depthLevel={depthLevel + 1}
-        chosenPrivileges={chosenPrivileges}
-      />
-    );
-  };
+	const getChildPrivilegesList = (parentId: number) => {
+		const childrenPrivileges = privileges.filter((privilege) => privilege.parentId === parentId);
+		if (!childrenPrivileges.length) return null;
+		return (
+			<PrivilegesList
+				privileges={privileges}
+				idsToRender={childrenPrivileges.map((childrenPrivilege) => childrenPrivilege.id)}
+				privilegeCheckboxesState={privilegeCheckboxesState}
+			/>
+		);
+	};
 
-  return (
-    <S.List depthLevel={depthLevel}>
-      {idsToRender.map((id) => {
-        const item = privileges.find((i) => i.id === id)!;
-        const { label } = item
-        return (
-          <React.Fragment key={item.id}>
-            <S.ListItem>
-              {label}
-            </S.ListItem>
-            {getChildNodes(item.id)}
-          </React.Fragment>
-        );
-      })}
-    </S.List>
-  )
-}
+	return (
+		<S.List>
+			{idsToRender.map((id) => {
+				const privilege = privileges.find((privilege) => privilege.id === id)!;
+				return (
+					<React.Fragment key={privilege.id}>
+						<S.ListItem>
+							{privilege.label}
+						</S.ListItem>
+						{getChildPrivilegesList(privilege.id)}
+					</React.Fragment>
+				);
+			})}
+		</S.List>
+	);
+};

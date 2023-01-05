@@ -11,7 +11,6 @@ interface IGetAccordionSubheading {
 export const getAccordionSubtitle = ({
 	privilegeIds,
 	privilegeCheckboxesState,
-	privileges,
 	of,
 	servicesSelected,
 }: IGetAccordionSubheading) => {

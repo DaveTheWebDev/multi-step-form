@@ -6,6 +6,7 @@ export interface IPrivilegeDTO {
 }
 
 export interface ICategoryDTO {
+	id: number;
 	category: string;
 	privilegeIds: number[];
 }

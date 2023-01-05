@@ -3,6 +3,5 @@ import { IPrivilege, IPrivilegeCheckboxStates } from "mocks/privileges/privilege
 export interface PrivilegesListProps {
   privileges: IPrivilege[];
   idsToRender?: number[];
-  depthLevel?: number;
-  chosenPrivileges: IPrivilegeCheckboxStates
+  privilegeCheckboxesState: IPrivilegeCheckboxStates
 }

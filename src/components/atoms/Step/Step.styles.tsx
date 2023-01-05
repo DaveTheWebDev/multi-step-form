@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Wrapper = styled.div`
   position: absolute;
@@ -15,6 +15,6 @@ const Wrapper = styled.div`
   border-radius: 12px;
 
   background-color: ${({ theme }) => theme.colors.white};
-`
+`;
 
-export { Wrapper }
+export { Wrapper };

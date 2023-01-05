@@ -1,17 +1,12 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-const Wrapper = styled.ul`
-margin-bottom: 16px;
-`
-
-const Privilege = styled.li<{ depthLevel: number }>`
-  
-`
 const EmptyPrivileges = styled.p`
   margin-bottom: 16px;
   line-height: 150%;
   color: #0E171B;
-`
+`;
+const CategoryName = styled.h3`
+  font-size: 16px;
+`;
 
-
-export { Wrapper, Privilege, EmptyPrivileges }
+export { EmptyPrivileges, CategoryName };

@@ -1,17 +1,17 @@
-import React, { useState, useCallback, useEffect } from 'react'
+import { useState, useCallback, useEffect } from "react";
 
 export const useAccordion = (index: number) => {
-  const [isExpanded, setExpanded] = useState(false)
+	const [isExpanded, setExpanded] = useState(false);
 
-  const toggleExpanded = useCallback(() => {
-    setExpanded(prev => !prev)
-  }, [])
+	const toggleExpanded = useCallback(() => {
+		setExpanded(prev => !prev);
+	}, []);
 
-  useEffect(() => {
-    if (index === 0) {
-      setExpanded(true)
-    }
-  }, [])
+	useEffect(() => {
+		if (index === 0) {
+			setExpanded(true);
+		}
+	}, []);
 
-  return { isExpanded, toggleExpanded }
-}
+	return { isExpanded, toggleExpanded };
+};

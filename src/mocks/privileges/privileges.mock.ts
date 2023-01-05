@@ -2,18 +2,22 @@ import { ICategory, IPrivilege } from "./privileges.model";
 
 export const categories: ICategory[] = [
 	{
+		id: 1232,
 		category: "Employees",
 		privilegeIds: [1, 12],
 	},
 	{
+		id: 3123,
 		category: "Company Management",
 		privilegeIds: [2, 21, 22],
 	},
 	{
+		id: 3543,
 		category: "Company Performance",
 		privilegeIds: [3, 4, 5],
 	},
 	{
+		id: 2137,
 		category: "Workspaces Management",
 		privilegeIds: [6],
 	},

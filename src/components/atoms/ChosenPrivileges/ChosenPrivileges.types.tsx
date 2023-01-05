@@ -1,6 +1,8 @@
-import { IChosenPrivilege } from "../../../mocks/privileges.model";
+import { ICategory, IPrivilege, IPrivilegeCheckboxStates } from "mocks/privileges/privileges.model";
 
 export interface ChosenPrivilegesProps {
-  privileges: IChosenPrivilege[]
+  privilegeCheckboxesState: IPrivilegeCheckboxStates
   emptyPrivilegesLabel: string;
+  privileges: IPrivilege[]
+  categories: ICategory[]
 }

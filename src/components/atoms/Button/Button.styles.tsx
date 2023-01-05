@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components'
-import { ButtonProps } from './Button.types'
+import styled, { css } from "styled-components";
+import { ButtonProps } from "./Button.types";
 
 const primary = css`
   padding: 11px 24px 13px;
@@ -8,12 +8,12 @@ const primary = css`
   color: ${({ theme }) => theme.colors.white};
   background-color: ${({ theme }) => theme.colors.primary};
   
-`
+`;
 const dangerous = css`
   color: ${({ theme }) => theme.colors.error};
 
   text-decoration: underline;
-`
+`;
 
 const Button = styled.button<ButtonProps>`
   border: none;
@@ -25,13 +25,13 @@ const Button = styled.button<ButtonProps>`
 
   cursor: pointer;
   ${({ variant }) => {
-    switch (variant) {
-      case 'primary':
-        return primary
-      case 'dangerous':
-        return dangerous
-    }
-  }}
-`
+		switch (variant) {
+		case "primary":
+			return primary;
+		case "dangerous":
+			return dangerous;
+		}
+	}}
+`;
 
-export { Button }
+export { Button };
