@@ -1,5 +1,4 @@
 import styled from "styled-components";
-const left = 3;
 
 const Checkmark = styled.svg<{ depthLevel: number }>`
     position: absolute;
