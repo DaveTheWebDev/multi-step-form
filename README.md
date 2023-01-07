@@ -12,16 +12,16 @@ Open [live demo](https://davethewebdev.github.io/multi-step-form/).
 
 ## Project contains
 
-:white_check_mark: Recursive components  
-:white_check_mark: Context API with React state  
-:white_check_mark: Custom hooks  
-:white_check_mark: Atomic design  
-:white_check_mark: Mocks  
-:white_check_mark: Accessible checkboxes  
-:white_check_mark: Accessible accordion  
-:white_check_mark: Codebase adapted to introduce multi language  
-:white_check_mark: Global and theme styles  
-:white_check_mark: Clean code principles
+[x] Recursive components  
+[x] Context API with React state  
+[x] Custom hooks  
+[x] Atomic design  
+[x] Mocks  
+[x] Accessible checkboxes  
+[x] Accessible accordion  
+[x] Codebase adapted to introduce multi language  
+[x] Global and theme styles  
+[x] Clean code principles
 
 ## To be added in the immediate future
 
