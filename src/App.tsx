@@ -3,7 +3,7 @@ import { MultiStepsFormProvider, TranslationsProvider } from "components/context
 import { StylesProvider } from "styles/theme";
 import { Form } from "components/templates/Form/Form";
 
-function App() {
+export const App = () => {
 	return (
 		<StylesProvider>
 			<MultiStepsFormProvider>
@@ -13,6 +13,4 @@ function App() {
 			</MultiStepsFormProvider>
 		</StylesProvider>
 	);
-}
-
-export default App;
+};

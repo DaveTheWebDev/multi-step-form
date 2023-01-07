@@ -4,7 +4,7 @@ import { ArrowIcon } from "../Icons/Arrow/ArrowIcon";
 import { useAccordion } from "./Accordion.hooks";
 import * as S from "./Accordion.styles";
 
-export const Accordion = ({ children, subtitle, title, index }: AccordionProps) => {
+export const Accordion = ({ children, index, subtitle, title }: AccordionProps) => {
 	const { isExpanded, toggleExpanded } = useAccordion(index);
 	return (
 		<S.Wrapper>
