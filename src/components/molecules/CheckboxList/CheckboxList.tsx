@@ -53,29 +53,5 @@ export const CheckboxList = ({
 				);
 			})}
 		</S.List>
-
-	// <div key={label + name}>
-	//   <Checkbox key={label}
-	//     choosePrivilege={choosePrivilege(id, chosenPrivileges)}
-	//     isChecked={chosenPrivileges.includes(id)}
-	//     label={label}
-	//     name={name}
-	//     id={label}
-	//     depthLevel={i}
-	//     isVisible={true}
-	//   />
-	//   {subprivileges?.map(({ label, name, id }) =>
-	//     <Checkbox
-	//       key={label}
-	//       choosePrivilege={choosePrivilege(id, chosenPrivileges)}
-	//       isChecked={chosenPrivileges.includes(id)}
-	//       label={label}
-	//       name={name}
-	//       id={label}
-	//       depthLevel={i}
-	//       isVisible={false}
-	//     />
-	//   )}
-	// </div>
 	);
 };
